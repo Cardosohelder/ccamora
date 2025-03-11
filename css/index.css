@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+body{ /*OK*/
+    height: 3775px;
+    font-family: "Neuton", serif;
+    font-size: normal;
+}
+
+.bg-img{ /*OK*/
+    background-repeat: repeat;
+    width: 100vw;
+    height: 60vw;
+    object-fit: cover;
+    filter: brightness(0.8);
+    position:fixed; /*mudar para absolute se não gostar*/
+    z-index: -1;
+}
+
+.navbar{
+    position: sticky;  /*não funciona*/
+    top: 0;
+    overflow: hidden;
+    opacity: 0.9;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.texto-apresentacao{ /*titulos sobre imagem background + títulos cards homepage*/
+    color: white;
+    font-family: "Russo One", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: small;
+    padding-top: 200px; /*ALTERAÇÃO*/
+    text-align: center;
+}
+
+.texto-apresentacaosub{ /*titulos cards subpages*/
+    color: blue;
+    font-family: "Russo One", serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: small;
+    padding-top: 10px; /*ALTERAÇÃO*/
+    text-align: center;
+}
+
+.red-icon{ /*Ícones vermelhos*/
+    width: 125px;
+    padding-top:5%;
+    padding-bottom: 5%;
+    margin: auto;
+    margin-bottom: -200px;
+    display: block;
+}
+
+.hr{ /* linha gradiente*/
+    height: 4px;
+    border-radius: 10px;
+    background: linear-gradient(to left, blue, red);
+}
+
+.texto-descritivo{ /*texto descritivo*/
+    color:black;
+    background-color: white;
+    font-family: "Neuton", serif;
+    font-size: large;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-top: 5%; 
+    border-radius: 0.5%;
+}
+
+.card{ /*formatação cards*/ 
+    width: 100%; 
+    border: none;
+} 
+
+.card-img-top{ /*imagens cards*/
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+    box-shadow: none;
+}
+
+.card-body{ /*título sob as imagens dos cards */
+    color: rgb(0, 0, 0);
+    font-family: "Russo One", serif;
+    font-weight:100;    
+}
+
+.sec-oclube, 
+.sec-acanoagem,
+.sec-vemconhecer
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mapa-localizacao{ /*mapa google*/
+    width:90%;
+    height: 400px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+.formulario{
+    width: 600px;
+    margin-left: 20px;    
+    margin-right: 20px;
+    margin-top: -150px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-left: 30px;
+}
+
+.formulario-parcerias{
+    width: 90%;
+    margin: auto;   
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
+    opacity: 0.8;  
+}
+
+#nome, 
+#mail,
+#telefone{ /*chamar o id do nome do form*/
+    border-radius: 5px;
+    height: 30px;
+} 
+
+#mensagem-texto{ /*caixa de texto configurada*/
+    border-radius: 15px;
+    height: 150px;
+    width: 100px; /*ocupa 80% da largura total - vai autoadptar-se ou 500px e ele fica fixo*/
+}
+
+.redes-sociais{
+        width: 30px;
+        border-radius: 45%;
+        box-shadow: none;
+        text-decoration: none;
+        margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+
+/* ------------------FOOTER-------------------- */
+
+footer{
+    background-color: #111; /*cor background footer superior*/
+    font-size:smaller;
+    line-height: 2;
+}
+
+.footercontainer{
+    width: 100%;
+    /* padding: 10px 30px 20px ; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white; /* cor do texto do footer*/      
+}
+
+.footerbottom{ /*footer final row*/
+    color: white;
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.img-container { /*imagens subpages*/
+    display: flex;
+}
+
+  .img-container img {
+    width: 33%;
+    padding: 5px;
+}
+
+.video-container { /*video youtube*/
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .video {
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 0 auto;    
+  }
+
+/* ------------------ EFEITOS CSS -------------------- */
+
+ .img-oclube{
+    width: 100%;
+    transform: scale(1.0);
+    transition: transform ease-in-out 1s;
+}
+
+.img-oclube:hover{ /*Logo CCA e red icons */
+  transform: scale(1.1); /*obrigo a voltar ao original - colocar o mesmo valor do anterior torna mais suave*/
+  transition: transform ease-in-out 1s; /*aumento o tempo para mudar a animação do efeito*/
+}
+
+.btn-primary:hover{ /*botões SABER MAIS com animação e sombra*/
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+}
+
+.zoom-restringido{ /*zoom dentro da caixa*/
+    overflow: hidden;
+}
+
+.footercontainer{ /*azul hover footer*/
+    a:hover {color: rgb(16, 123, 223);}
+}
