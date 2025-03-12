@@ -8,14 +8,14 @@
     max-width: 100%;
 }
 
-body{ /*OK*/
+body{ 
     height: 3775px;
     font-family: "Neuton", serif;
     font-size: normal;
 }
 
-.bg-img{ /*OK*/
-    background-repeat: repeat;
+.bg-img{ 
+    background-repeat:repeat;
     width: 100vw;
     height: 60vw;
     object-fit: cover;
@@ -25,13 +25,14 @@ body{ /*OK*/
 }
 
 .navbar{
-    position: sticky;  /*não funciona*/
+    position: sticky; 
     top: 0;
     overflow: hidden;
     opacity: 0.9;
     font-size: larger;
     font-weight: bolder;
 }
+    
 
 .texto-apresentacao{ /*titulos sobre imagem background + títulos cards homepage*/
     color: white;
@@ -209,8 +210,10 @@ footer{
     width: 80%;
     height: 80%;
     display: block;
-    margin: 0 auto;    
+    margin: 0 auto;  
   }
+
+
 
 /* ------------------ EFEITOS CSS -------------------- */
 
@@ -238,3 +241,4 @@ footer{
 .footercontainer{ /*azul hover footer*/
     a:hover {color: rgb(16, 123, 223);}
 }
+
