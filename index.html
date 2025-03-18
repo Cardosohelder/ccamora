@@ -117,7 +117,7 @@
     <hr>
     <!--------------------CARD O CLUBE START--------------->
 
-    <div id="oclube"></div> 
+    <div id="oclube"></div> 7
     <div class="sec-oclube">
       <div class="card text-center mb-3"> 
         <div class="row g-0">
@@ -426,7 +426,7 @@
                           <ul>
                             <li><a href="#">Sobre</a></li>
                             <li><a href="./html/historia.html">História</a></li>
-                            <li><a href="./html/Parcerias.html">Parcerias</a></li>
+                            <li><a href="./html/parcerias.html">Parcerias</a></li>
                           </ul>
                       </div>
                       <div class="col-md-4">   
@@ -438,7 +438,7 @@
                           </ul>
                       </div>
                       <div class="col-md-4">   
-                        <li style="font-size: large;"><a href="./html/acanoagem.html">Vem conhecer</a></li>                      
+                        <li style="font-size: large;"><a href="./html/vemconhecer.html">Vem conhecer</a></li>                      
                         <ul>
                           <li><a href="#">Lazer</a></li>
                           <li><a href="#">Aulas Abertas</a></li>
@@ -469,14 +469,36 @@
               Ao visitar ou usar os nossos serviços, está a concordar com o uso de cookies conforme descrito nos nossos 
                 <a href="../termos-html">Termos de Serviço, Política de Cookies e Outros</a>
                 <br>
-                <a href="mailto:ccamora@gmail.com" target="../index.html#blank">© 2025 Hélder Cardoso - Todos os direitos reservados</a>
-            </div>
+                <a href="heldercardodo@hotmail.com" target="../index.html#blank">© 2025 Hélder Cardoso - Todos os direitos reservados</a>
+              </div>
           </div>    
       </footer>   
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    
+      <div class="botao-topo text-center sticky-bottom"> <!---BOTÃO UP--->
+        <a href="#">
+          <img src="./img/icone_up.jpg" alt="" class="topo-branco">
+        </a>
+      </div>
+
+                  
   </body>    
 </html>
+
+<script>
+  const botaoTopo = document.querySelector(".botao-topo");
+  
+  window.addEventListener("scroll", function(event){
+      if(window.scrollY >= 100){
+        botaoTopo.classList.add("botao-topo-mostrar");
+        botaoTopo.classList.remove("botao-topo-escondido");
+      }else{
+        botaoTopo.classList.add("botao-topo-escondido");
+        botaoTopo.classList.remove("botao-topo-mostrar");
+      }
+    }
+  );
+</script>
+
+
 
 

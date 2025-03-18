@@ -192,15 +192,6 @@ footer{
     text-align: center;
 }
 
-.img-container { /*imagens subpages*/
-    display: flex;
-}
-
-  .img-container img {
-    width: 33%;
-    padding: 5px;
-}
-
 .video-container { /*video youtube*/
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -213,6 +204,14 @@ footer{
     margin: 0 auto;  
   }
 
+  .windguru{ /*windguru api*/
+    width: 80%;
+    height: 80%;
+    display: block;
+    margin: 0 auto; 
+    position: relative;
+    margin-bottom: -10%;
+    }
 
 
 /* ------------------ EFEITOS CSS -------------------- */
@@ -238,46 +237,62 @@ footer{
     overflow: hidden;
 }
 
-.footercontainer{ /*azul hover footer*/
+.footercontainer{ /*texto azul hover footer*/
     a:hover {color: rgb(16, 123, 223);}
 }
 
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+.card-img-topsub{ /*imagens cards subpages*/
+    display: flex;
+    width: 100%;
+    transform: scale(1.0);
+    transition: transform ease-in-out 1s;
+}
+    
+.card-img-topsub:hover{
+    transform: scale(1.1);
+    transition: transform ease-in-out 1s;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  .img-container img {
+    width: 33%;
+    padding: 5px;
 }
 
-// Get the button:
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.5;
+    }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+@keyframes fade-out{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
 }
+
+.botao-topo img{
+    width: 40px;
+    margin-top: -300px;
+    background-color: rgb(151, 166, 163);
+    border-radius: 50px;
+    opacity: 0;
+    animation: fade-out 0s;
+}
+
+.botao-topo-mostrar img{
+    animation: fade-in 1s ease-in forwards;
+}
+
+.botao-topo-escondido img{
+    animation: fade-out 1s ease-out forwards;
+}
+
+
